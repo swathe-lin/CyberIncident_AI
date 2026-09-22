@@ -1,0 +1,384 @@
+CYBERINCIDENT AI - CYBERSECURITY GUIDANCE
+==========================================
+
+PURPOSE
+-------
+This knowledge base contains curated cybersecurity incident-response
+guidance for use by the CyberIncident AI retrieval system.
+
+The guidance is intended to support incident analysis, investigation,
+containment, recovery, and security recommendations.
+
+1. INCIDENT RESPONSE LIFECYCLE
+------------------------------
+
+A cybersecurity incident should be handled systematically.
+
+Important activities include:
+
+- Preparing people, processes, technologies, and response procedures.
+- Detecting and analyzing suspicious security events.
+- Determining the scope and impact of an incident.
+- Containing affected systems and preventing further damage.
+- Eradicating malicious activity and its causes.
+- Recovering systems safely.
+- Recording lessons learned and improving future response capability.
+
+Incident response should be coordinated with organizational
+cybersecurity risk-management activities.
+
+2. INCIDENT IDENTIFICATION AND ANALYSIS
+---------------------------------------
+
+During incident analysis, investigators should determine:
+
+- What happened?
+- When did it happen?
+- Which systems or accounts were affected?
+- What type of attack occurred?
+- Which indicators of compromise were observed?
+- What accounts, applications, devices, or data were involved?
+- How did the attacker gain access?
+- What actions were performed after initial access?
+- What information may have been accessed or transferred?
+
+Useful evidence can include:
+
+- Authentication logs
+- Application logs
+- Network logs
+- Endpoint activity
+- Security alerts
+- File activity
+- Process information
+- Cloud audit logs
+- Email information
+- Firewall and proxy records
+
+3. PHISHING RESPONSE
+--------------------
+
+Phishing incidents may involve fraudulent messages designed to
+trick users into revealing credentials, opening malicious content,
+or performing an unsafe action.
+
+Recommended response activities can include:
+
+- Preserve the suspicious email and relevant metadata.
+- Identify affected recipients.
+- Block malicious domains, URLs, or senders when appropriate.
+- Reset credentials if compromise is suspected.
+- Review authentication activity.
+- Check whether additional users were targeted.
+- Inspect endpoints for suspicious activity.
+- Search for related messages across the organization.
+
+4. BRUTE FORCE AND CREDENTIAL ATTACKS
+-------------------------------------
+
+Indicators may include:
+
+- Repeated authentication failures.
+- Multiple login attempts from an unusual source.
+- Account lockouts.
+- Authentication attempts against many accounts.
+- Unusual login locations or times.
+
+Response actions can include:
+
+- Block or restrict suspicious sources when appropriate.
+- Review authentication logs.
+- Reset compromised credentials.
+- Enable or strengthen multi-factor authentication.
+- Apply appropriate rate limiting or account protection.
+- Identify other accounts targeted by the activity.
+
+5. RANSOMWARE RESPONSE
+----------------------
+
+Ransomware may result in files or systems becoming unavailable
+because of malicious encryption or other destructive activity.
+
+Important response activities can include:
+
+- Isolate affected systems.
+- Prevent the incident from spreading to additional systems.
+- Preserve relevant evidence.
+- Identify affected accounts and systems.
+- Determine whether backups are available and trustworthy.
+- Remove the cause of compromise before recovery.
+- Restore systems from clean and verified sources.
+- Monitor restored systems for continuing malicious activity.
+
+6. MALWARE RESPONSE
+-------------------
+
+Malware investigations should examine:
+
+- Suspicious executables.
+- Unexpected processes.
+- Persistence mechanisms.
+- Unusual network connections.
+- Recently downloaded files.
+- Related endpoint activity.
+
+Possible response actions include:
+
+- Isolate affected endpoints.
+- Preserve evidence before destructive remediation when appropriate.
+- Identify the malware and its behavior.
+- Remove malicious components.
+- Search other systems for related indicators.
+- Review how the malware entered the environment.
+
+7. WEB APPLICATION INCIDENTS
+----------------------------
+
+Web application incidents may involve malicious input,
+unauthorized access, application modification, or database abuse.
+
+Investigators should examine:
+
+- Application logs.
+- Web server logs.
+- Database activity.
+- Authentication events.
+- Suspicious requests.
+- Unexpected file changes.
+- Changes to application configuration.
+
+Response activities can include:
+
+- Restrict malicious traffic.
+- Temporarily disable affected functionality when necessary.
+- Correct the underlying vulnerability.
+- Validate input handling and access controls.
+- Review database activity.
+- Restore modified content from trusted sources when required.
+
+8. DENIAL-OF-SERVICE INCIDENTS
+------------------------------
+
+Denial-of-service activity may cause service degradation or
+unavailability through excessive or malicious traffic.
+
+Useful investigation information includes:
+
+- Traffic volume.
+- Source patterns.
+- Targeted services.
+- Request rates.
+- Timing of the activity.
+- Network and application performance.
+
+Possible response actions include:
+
+- Apply traffic filtering.
+- Use rate limiting where appropriate.
+- Block malicious traffic sources when practical.
+- Coordinate with network or service providers.
+- Monitor service availability.
+- Continue investigating the source and characteristics of the attack.
+
+9. UNAUTHORIZED ACCESS
+----------------------
+
+Unauthorized access investigations should determine:
+
+- Which account or credential was used.
+- Whether the account was privileged.
+- Which systems were accessed.
+- What actions were performed.
+- What information was accessed.
+- Whether the access continued after detection.
+
+Response actions can include:
+
+- Disable or restrict compromised accounts.
+- Revoke active sessions or credentials when appropriate.
+- Review authentication and audit logs.
+- Remove unauthorized privileges.
+- Investigate additional systems accessed by the account.
+
+10. DATA EXFILTRATION
+---------------------
+
+Possible indicators of data exfiltration include:
+
+- Large unexpected outbound transfers.
+- Unusual destinations.
+- Abnormal database queries.
+- Unexpected access to sensitive information.
+- Unusual network communication patterns.
+
+Investigators should determine:
+
+- What information was accessed.
+- What information may have been transferred.
+- Which account or process performed the activity.
+- Where the information was sent.
+- When the transfer occurred.
+
+Response activities may include restricting the suspicious
+destination, disabling compromised access, preserving evidence,
+and determining the scope of potentially exposed information.
+
+11. CLOUD ACCOUNT COMPROMISE
+----------------------------
+
+Cloud investigations should examine:
+
+- Unusual authentication events.
+- New access credentials or keys.
+- Unexpected resource creation.
+- Changes to permissions.
+- Unusual geographic or temporal access.
+- Cloud audit logs.
+
+Possible response actions include:
+
+- Revoke compromised credentials.
+- Terminate suspicious sessions.
+- Reset affected accounts.
+- Review cloud audit records.
+- Check for unauthorized resources.
+- Review permission and access changes.
+
+12. INSIDER-RELATED INCIDENTS
+-----------------------------
+
+Potential indicators can include:
+
+- Unusual access to sensitive files.
+- Large file copies.
+- Activity outside normal working patterns.
+- Access to information unrelated to job responsibilities.
+
+Investigations should use appropriate organizational procedures
+and preserve relevant evidence.
+
+Response actions may include restricting affected accounts,
+reviewing access history, preserving logs, and determining the
+scope of accessed information.
+
+13. LATERAL MOVEMENT
+--------------------
+
+Lateral movement refers to activity in which an attacker moves
+between systems after gaining an initial foothold.
+
+Useful indicators include:
+
+- Multiple host connections.
+- Unexpected administrative activity.
+- New remote sessions.
+- Authentication activity between unusual systems.
+
+Investigators should identify:
+
+- The initial compromised system.
+- Accounts used for movement.
+- Destination systems.
+- Authentication paths.
+- Additional systems that may have been compromised.
+
+14. EVIDENCE PRESERVATION
+-------------------------
+
+Incident investigation should preserve relevant evidence so that
+the organization can understand what happened and support further
+investigation.
+
+Potential evidence includes:
+
+- System logs.
+- Authentication logs.
+- Network traffic records.
+- Endpoint information.
+- Email records.
+- Cloud audit records.
+- File activity.
+- Security alerts.
+
+Investigators should avoid unnecessary changes to evidence and
+follow organizational procedures for evidence handling.
+
+15. INCIDENT CONTAINMENT
+------------------------
+
+Containment aims to limit the spread and impact of an incident.
+
+Depending on the situation, containment may involve:
+
+- Isolating affected endpoints.
+- Restricting compromised accounts.
+- Blocking malicious communication.
+- Limiting network access.
+- Disabling affected services temporarily.
+- Revoking compromised credentials.
+
+Containment decisions should consider business impact and the
+risk of further compromise.
+
+16. RECOVERY
+------------
+
+Recovery should return affected services to a trusted operating
+state.
+
+Important activities include:
+
+- Removing the cause of compromise.
+- Restoring from trusted sources.
+- Validating system integrity.
+- Monitoring restored systems.
+- Confirming security controls are functioning.
+- Documenting recovery actions.
+
+17. MITRE ATT&CK CONCEPTS
+-------------------------
+
+MITRE ATT&CK provides a knowledge base describing adversary
+behavior.
+
+ATT&CK organizes behavior using concepts such as:
+
+- Tactics: the goals or reasons behind adversary actions.
+- Techniques: methods adversaries use to achieve those goals.
+- Procedures: examples of how techniques may be implemented.
+
+ATT&CK concepts can help analysts describe observed adversary
+behavior and connect incident observations with known techniques.
+
+18. IMPORTANT SAFETY PRINCIPLE
+-----------------------------
+
+CyberIncident AI provides defensive incident-analysis support.
+
+Its recommendations should be treated as decision-support
+information rather than an automatic replacement for qualified
+security personnel, organizational policies, legal requirements,
+or incident-response procedures.
+
+SOURCE REFERENCES
+-----------------
+
+1. NIST Special Publication 800-61 Rev. 3
+   Incident Response Recommendations and Considerations for
+   Cybersecurity Risk Management: A CSF 2.0 Community Profile
+   https://csrc.nist.gov/pubs/sp/800/61/r3/final
+
+2. NIST Computer Security Incident Handling Guide / Incident Response
+   https://csrc.nist.gov/projects/incident-response
+
+3. MITRE ATT&CK
+   https://attack.mitre.org/
+
+4. MITRE ATT&CK FAQ
+   https://attack.mitre.org/resources/faq/
+
+NOTE
+----
+This document is a project knowledge-base summary prepared for
+retrieval and demonstration purposes. It is not a reproduction
+of the referenced publications.
